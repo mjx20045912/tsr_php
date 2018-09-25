@@ -1,6 +1,7 @@
 <?php   
+header("content-type:text/html;charset=utf-8"); 
     require_once 'db/db_comm.php';
-    
+    $page_title ="天南地北天水人";
     $db = DB::getIntance();
     include './header.php';
     $query = "select * from mjx_posts ";

@@ -1,0 +1,1 @@
+<?php exit();?>{"errcode":"0","errmsg":"ok","ticket":"kgt8ON7yVITDhtdwci0qedM3XjS1ca3LpvEnWwxzXpxYvgRVlV927GRjSMwLG1P0lYYkwmwKyYaZO7HYv1qrow","expires_in":"7200","expire_time":1537895423,"jsapi_ticket":"kgt8ON7yVITDhtdwci0qedM3XjS1ca3LpvEnWwxzXpyiXzadTdCc7eFreInAJJFgfjCI3PY0QemX91-u1XHRAg"}

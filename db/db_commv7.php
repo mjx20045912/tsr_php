@@ -28,18 +28,12 @@ class DB{
    }
    //连接数据库
    private function db_connect(){
-    // $this->link=mysqli_connect($this->host.':'.$this->port,$this->user,$this->pass);
-    // if(!$this->link){
-    //   echo "数据库连接失败<br>";
-    //   echo "错误编码".mysqli_errno($this->link)."<br>";
-    //   echo "错误信息".mysqli_error($this->link)."<br>";
-    //   exit;
-    // }
-    $this->link=new mysqli();//实例化mysqli
-    $this->link->connect('rm-bp199tjtb956ve6co.mysql.rds.aliyuncs.com','mjx20045912','User@123','ryy3yr3096');
-    if(mysqli_connect_error()){
-        echo'数据库连接错误,错误信息是.'.mysqli_connect_error();
-        exit();
+    $this->link=mysqli_connect($this->host.':'.$this->port,$this->user,$this->pass);
+    if(!$this->link){
+      echo "数据库连接失败<br>";
+      echo "错误编码".mysqli_errno($this->link)."<br>";
+      echo "错误信息".mysqli_error($this->link)."<br>";
+      exit;
     }
    }
    //设置字符集
