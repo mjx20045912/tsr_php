@@ -1,7 +1,7 @@
 <?php 
 function output($status, $message){
     echo json_encode([
-        'state'=>$status,
+        'status'=>$status,
         'message'=>$message
     ]);
 }
@@ -11,11 +11,21 @@ try{
   $db = DB::getIntance();
   date_default_timezone_set("Asia/Shanghai");
 
+  $post_id = $_POST["id"];
   $post_title = $_POST["title"];
+  $post_summary = $_POST["summary"];
+  $post_category = $_POST["category"];
   $post_content = $_POST["content"];
+  $post_author = $_POST["author"];
   $post_date = date("Y-m-d h:i:sa");
-  $insert_data = ["post_title"=>$post_title,"post_content"=>$post_content,"post_date"=>$post_date];
-  $res = $db->insert('mjx_posts',$insert_data);
+  $insert_data = ["post_title"=>$post_title,"post_content"=>$post_content,"post_date"=>$post_date,"post_author"=>$post_author];
+  $res = 0;
+  if($post_id){ 
+    $res = $db->update('mjx_posts',$insert_data,array('id'=>$post_id));
+  }else{
+    $res = $db->insert('mjx_posts',$insert_data); 
+  }
+  
   if($res > 0){
     output(200,'');
   }else{
