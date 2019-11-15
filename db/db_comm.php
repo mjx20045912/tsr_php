@@ -13,11 +13,11 @@ class DB{
  
   //私有的构造方法
   private function __construct(){
-    $this->host =  "rm-bp199tjtb956ve6co.mysql.rds.aliyuncs.com";
+    $this->host =  "xxx";
     $this->port =  "3306";
-    $this->user =  "mjx20045912";
-    $this->pass =  "User@123";
-    $this->db =  "ryy3yr3096";
+    $this->user =  "xxx";
+    $this->pass =  "xx@x";
+    $this->db =  "xxx";
     $this->charset= "utf8";
     //连接数据库
     $this->db_connect();
